@@ -15,32 +15,13 @@ import com.example.samplearraudeque.ui.theme.SampleArrauDequeTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            SampleArrauDequeTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
-            }
-        }
+
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    SampleArrauDequeTheme {
-        Greeting("Android")
+    fun main() {
+        val rss = "Rss"
+        val rdf = "Rdf"
+        val stack = ArrayDeque<Tag>(listOf(Root(rss)))
+        stack
     }
 }
