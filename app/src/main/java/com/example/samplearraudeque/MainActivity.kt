@@ -15,13 +15,14 @@ import com.example.samplearraudeque.ui.theme.SampleArrauDequeTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        main()
     }
 
-    fun main() {
+    private fun main() {
         val rss = "Rss"
         val rdf = "Rdf"
         val stack = ArrayDeque<Tag>(listOf(Root(rss)))
-        stack
+        val child = stack.last().createChild(rss)
+        child.handleChildTagEnd()
     }
 }
